@@ -59,7 +59,7 @@ async function main() {
     });
   });
 
-  server.listen({ port: process.env.PORT ? Number(process.env.PORT) : 8080 }, (err, address) => {
+  server.listen({ host: '0.0.0.0', port: process.env.PORT ? Number(process.env.PORT) : 8080 }, (err, address) => {
     if (err) console.error(err);
     console.log(`Server listening at ${address}`);
   });
