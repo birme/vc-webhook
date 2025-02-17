@@ -37,6 +37,10 @@ async function main() {
   const server = fastify();
   const dbUrl = await getDbUrl();
 
+  server.get('/', async (request, reply) => {
+    reply.send('Hello World');
+  });
+
   server.get<{
     Querystring: IQuerystring;
     Reply: {
